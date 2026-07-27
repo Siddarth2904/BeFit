@@ -13,11 +13,12 @@ import org.springframework.web.reactive.function.client.WebClientResponseExcepti
 @RequiredArgsConstructor
 public class UserValidationService {
     public final WebClient userServiceWebClient;
+
     public Boolean validateUser(String id) {
         log.info("Calling user validation API for userId:{}",id);
         try{
             return userServiceWebClient.get()
-                    .uri("/api/user/{id}/validate",id).retrieve()
+                    .uri("/api/users/{id}/validate",id).retrieve()
                     .bodyToMono(Boolean.class).block();
         }catch(WebClientResponseException e){
             if(e.getStatusCode()== HttpStatus.NOT_FOUND){
