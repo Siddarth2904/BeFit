@@ -1,11 +1,9 @@
-package com.fitness.userservice.dto;
+package com.fitness.apigateway.user;
 
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
-import org.jspecify.annotations.Nullable;
 
 @Data
 public class RegisterRequest {
