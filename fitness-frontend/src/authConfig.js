@@ -1,8 +1,8 @@
 export const authConfig = {
-    clientId: 'myClientID',
-    authorizationEndpoint: 'https://myAuthProvider.com/auth',
-    tokenEndpoint: 'https://myAuthProvider.com/token',
-    redirectUri: 'http://localhost:3000/',
-    scope: 'someScope openid',
+    clientId: 'oauth2-pkce-client',
+    authorizationEndpoint: 'http://localhost:8181/realms/fitness-oauth2/protocol/openid-connect/auth',
+    tokenEndpoint: 'http://localhost:8181/realms/fitness-oauth2/protocol/openid-connect/token',
+    redirectUri: 'http://localhost:5173',
+    scope: 'openid profile email offline_access',
     onRefreshTokenExpire: (event) => event.logIn(),
 }
