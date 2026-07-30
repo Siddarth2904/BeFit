@@ -12,6 +12,7 @@ public class RegisterRequest {
     @NotBlank(message = "Email cannot be blank")
     @Email(message = "Invalid email format")
     private String email;
+    private String keycloakId;
     @NotBlank(message = "Password cannot be blank")
     @Size(min = 6,message = "Must be atleast 6 characters")
     private String password;
