@@ -1,5 +1,6 @@
 import { Box, Button, FormControl, InputLabel, MenuItem, Select, TextField } from "@mui/material"
 import { useState } from "react";
+import { addActivity } from "../services/api";
 
 
 
@@ -12,12 +13,11 @@ const ActivityForm = ({ onActivityAdded }) => {
             onActivityAdded();
             setActivity({ type: "RUNNING", duration: '', caloriesBurned: '' });
         } catch (error) {
-            console.log("hello");
-
+            console.log(error);
         }
     }
     return (
-        <Box component="form" onSubmit={handleSubmit()} sx={{ mb: 4 }}>
+        <Box component="form" onSubmit={handleSubmit} sx={{ mb: 4 }}>
             <FormControl fullWidth sx={{ mb: 2 }}>
                 <InputLabel>Activity Type</InputLabel>
                 <Select value={activity.type} onChange={(e) => setActivity({ ...activity, type: e.target.value })}>

@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Navigate, Route, Routes, useLocation } from 'r
 import './App.css'
 import Box from '@mui/material/Box';
 import { Button } from '@mui/material'
-import { Activity, useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { setCredentials } from './store/authSlice'
 import { AuthContext } from 'react-oauth2-code-pkce'
@@ -33,7 +33,7 @@ function App() {
     <Router>
       {
         !token ? (
-          <Button variant='containesd' color='#dc004e' onClick={() => { logIn() }}> Login</Button >
+          <Button variant='contained' color='#dc004e' onClick={() => { logIn() }}> Login</Button >
         ) : (
           <Box component="section" sx={{ p: 2, border: '1px dashed grey' }}>
             <Routes>
