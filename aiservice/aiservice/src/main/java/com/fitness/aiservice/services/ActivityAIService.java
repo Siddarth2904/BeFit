@@ -17,8 +17,9 @@ import java.util.List;
 
 @Service
 @Slf4j
+@RequiredArgsConstructor
 public class ActivityAIService {
-    @Autowired
+
     private GeminiService geminiService;
 
     public Recommendation generateRecommendation(Activity activity) {

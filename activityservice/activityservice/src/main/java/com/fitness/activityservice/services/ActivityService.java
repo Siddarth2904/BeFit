@@ -4,6 +4,7 @@ import com.fitness.activityservice.dto.ActivityRequest;
 import com.fitness.activityservice.dto.ActivityResponse;
 import com.fitness.activityservice.model.Activity;
 import com.fitness.activityservice.repositories.ActivityRepository;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.jspecify.annotations.Nullable;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -15,12 +16,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 @Slf4j
 @Service
+@RequiredArgsConstructor
 public class ActivityService {
-    @Autowired
+
     private ActivityRepository activityRepository;
-    @Autowired
+
     private UserValidationService userValidationService;
-    @Autowired
+
     private RabbitTemplate rabbitTemplate;
 
 
