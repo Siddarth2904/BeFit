@@ -26,8 +26,7 @@ public class ActivityAIService {
         String prompt=createPromptForActivity(activity);
         String aiResponse=geminiService.getAnswer(prompt);
         log.info("Recommendation for activity: " + activity.getId());
-        Recommendation recommendation=processAIResponse(activity,aiResponse);
-        return recommendation;
+        return processAIResponse(activity,aiResponse);
     }
 
     private String createPromptForActivity(Activity activity) {

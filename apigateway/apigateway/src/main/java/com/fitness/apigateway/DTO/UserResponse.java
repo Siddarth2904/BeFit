@@ -1,4 +1,4 @@
-package com.fitness.apigateway.user;
+package com.fitness.apigateway.DTO;
 
 import lombok.Data;
 

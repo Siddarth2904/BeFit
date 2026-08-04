@@ -1,12 +1,11 @@
-package com.fitness.apigateway;
+package com.fitness.apigateway.filters;
 
-import com.fitness.apigateway.user.RegisterRequest;
-import com.fitness.apigateway.user.UserService;
+import com.fitness.apigateway.DTO.RegisterRequest;
+import com.fitness.apigateway.services.UserService;
 import com.nimbusds.jwt.JWTClaimsSet;
 import com.nimbusds.jwt.SignedJWT;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;

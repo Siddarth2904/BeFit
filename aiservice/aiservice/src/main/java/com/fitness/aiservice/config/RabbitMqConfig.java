@@ -19,6 +19,7 @@ public class RabbitMqConfig {
     private String routingKey;
     @Value("${rabbitmq.queue.name}")
     private String queue;
+
     @Bean
     public Queue activityQueue() {
         return new Queue(queue,true);
@@ -33,6 +34,7 @@ public class RabbitMqConfig {
     public Binding activityBinding(Queue activityQueue, DirectExchange activityExchange) {
         return BindingBuilder.bind(activityQueue).to(activityExchange).with(routingKey);
     }
+
     @Bean
     public MessageConverter jsonMessageConverter() {
         return new JacksonJsonMessageConverter();

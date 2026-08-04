@@ -1,5 +1,7 @@
-package com.fitness.apigateway.user;
+package com.fitness.apigateway.services;
 
+import com.fitness.apigateway.DTO.RegisterRequest;
+import com.fitness.apigateway.DTO.UserResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

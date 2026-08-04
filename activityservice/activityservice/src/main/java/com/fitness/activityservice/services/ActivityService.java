@@ -18,18 +18,14 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 public class ActivityService {
-
     private final ActivityRepository activityRepository;
-
     private final UserValidationService userValidationService;
-
     private final RabbitTemplate rabbitTemplate;
-
-
     @Value("${rabbitmq.exchange.name}")
     private String exchange;
     @Value("${rabbitmq.routing.key}")
     private String routingKey;
+
     public ActivityResponse trackActivity(ActivityRequest request){
         Boolean isValidUser=userValidationService.validateUser(request.getUserId());
         if(!isValidUser){
