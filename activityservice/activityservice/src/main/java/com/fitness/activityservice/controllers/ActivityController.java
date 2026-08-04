@@ -15,7 +15,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ActivityController {
 
-    private ActivityService activityService;
+    private final ActivityService activityService;
 
     @PostMapping
     public ResponseEntity<ActivityResponse> trackActivity(@RequestBody ActivityRequest request){

@@ -20,7 +20,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ActivityAIService {
 
-    private GeminiService geminiService;
+    private final GeminiService geminiService;
 
     public Recommendation generateRecommendation(Activity activity) {
         String prompt=createPromptForActivity(activity);

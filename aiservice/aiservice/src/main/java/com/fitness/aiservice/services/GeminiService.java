@@ -10,7 +10,7 @@ import java.util.Map;
 @Service
 public class GeminiService {
 
-    private WebClient webClient;
+    private final WebClient webClient;
 
     @Value("${gemini.api.url}")
     private String geminiUrl;

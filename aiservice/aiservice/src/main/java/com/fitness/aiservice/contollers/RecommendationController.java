@@ -17,7 +17,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class RecommendationController {
 
-    private RecommendationService recommendationService;
+    private final RecommendationService recommendationService;
 
     @GetMapping("/user/{userId}")
     public ResponseEntity<List<Recommendation>> getRecommendationsByUserId(@PathVariable String userId) {

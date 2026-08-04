@@ -13,7 +13,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class RecommendationService {
 
-    private RecommendationRepository recommendationRepository;
+    private final RecommendationRepository recommendationRepository;
 
     public List<Recommendation> getRecommendationsByUserId(String userId) {
         return recommendationRepository.findByUserId(userId);

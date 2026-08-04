@@ -18,8 +18,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class UserService {
 
-
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
     public UserResponse register( RegisterRequest request) {
         if (userRepository.existsByEmail(request.getEmail())){
